@@ -21,6 +21,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{c49c70fb-a984-4189-83fe-51a03fafdb30}}
+          heroku_app_name: "vast-fortress-76941" #Must be unique in Heroku
+          heroku_email: "febrian.aksen@gmail.com"
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
