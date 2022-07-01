@@ -12,7 +12,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: nodejs
 
 
     strategy:
@@ -29,7 +29,4 @@ jobs:
           heroku_api_key: 'c49c70fb-a984-4189-83fe-51a03fafdb30'
           heroku_app_name: "vast-fortress-76941" #Must be unique in Heroku
           heroku_email: "febrian.aksen@gmail.com"
-      - run: npm ci
-      - run: npm run build --if-present
-      - run: npm test
 
