@@ -7,7 +7,20 @@ router.get('/', function(req, res, next) {
   res.json({
     status: 200,
     message: "API running",
-    data: []
+    data: [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "gender": "male",
+        "age": 25
+      },
+      {
+        "id": 2,
+        "name": "Sheila Ottoelia",
+        "gender": "female",
+        "age": 24
+      }
+    ]
   });
 });
 
