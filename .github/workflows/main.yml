@@ -15,6 +15,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: 'Create env file'
         run: |
+          rm -f .env.production
           touch .env
           echo "${{ secrets.ENV_DEV }}" >> .env.production
           cat .env.production
@@ -25,6 +26,10 @@ jobs:
       #     heroku_email: ${{secrets.HEROKU_EMAIL}}
       #     usedocker: true
 
+      - name: 'Check env file'
+        run: |
+          ls
+          cat .env.production
       - name: Discord notification
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
