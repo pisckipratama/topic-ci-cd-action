@@ -28,7 +28,7 @@ jobs:
 
       - name: 'Check env file'
         run: |
-          ls
+          ls -lah
           cat .env.production
       - name: Discord notification
         env:
