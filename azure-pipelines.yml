@@ -25,6 +25,6 @@ stages:
       inputs:
         containerRegistry: 'pisckitama-docker-hub'
         repository: 'pisckitama/node-app-devops'
-        command: 'build'
+        command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: '$(tag)'
